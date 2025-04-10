@@ -1,0 +1,46 @@
+.menu-container {
+  position: relative;
+  inset: 0;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.menu-btn {
+  border: none;
+  color: var(--bg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 30px;
+  width: 30px;
+
+  transition:
+    color 0.2s linear,
+    box-shadow 0.2s linear,
+    filter 0.2s ease-in-out,
+    scale 0.2s ease-out;
+}
+
+.menu-btn:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.menu-add-btn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: var(--yellow);
+  font-size: 1.5rem;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+}
+
+.menu-add-btn:hover {
+  box-shadow: 0 0 20px 0 var(--yellow);
+}

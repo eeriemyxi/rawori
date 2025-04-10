@@ -1,0 +1,117 @@
+/* [Todo List] [end]*/
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+/* [Todo List] [end] */
+
+/* [Todo Item] [start] */
+.todo-item-container {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  padding: 5px 10px 5px 20px;
+  position: relative;
+  z-index: 1;
+  outline: 1px solid var(--bg1);
+  transition: outline 0.2s ease-in-out;
+}
+
+.todo-item-container:hover {}
+
+.todo-item-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--bg);
+  transition: filter 0.2s ease-out;
+}
+
+.todo-item-container:hover::before {
+  filter: brightness(1.4);
+}
+
+.todo-item-label {
+  color: var(--fg);
+  flex: 1;
+}
+/* [Todo Item] [end] */
+
+/* [Todo Item Menu] [start] */
+.todo-item-menu-container {
+  align-items: center;
+  display: none;
+  gap: 10px;
+}
+
+.todo-item-container:hover > .todo-item-menu-container {
+  display: flex;
+}
+
+.todo-item-menu-btn {
+  border: none;
+  color: var(--bg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 30px;
+  width: 30px;
+
+  transition:
+    color 0.2s linear,
+    box-shadow 0.2s linear,
+    filter 0.2s ease-in-out,
+    scale 0.2s ease-out;
+}
+
+.todo-item-menu-btn:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.todo-item-menu-done-btn {
+  background: var(--aqua);
+  border-radius: 50%;
+}
+
+.todo-item-menu-done-btn:hover {
+  box-shadow: 0 0 20px 0 var(--aqua);
+}
+
+.todo-item-menu-close-btn {
+  background: var(--red);
+  border-radius: 50%;
+}
+
+.todo-item-menu-close-btn:hover {
+  box-shadow: 0 0 20px 0 var(--red);
+}
+
+.todo-item-menu-stall-btn {
+  background: var(--yellow);
+  border-radius: 50%;
+}
+
+.todo-item-menu-stall-btn:hover {
+  box-shadow: 0 0 20px 0 var(--yellow);
+}
+
+.todo-item-menu-copy-content-btn {
+  background: var(--blue);
+  border-radius: 50%;
+}
+
+.todo-item-menu-copy-content-btn:hover {
+  box-shadow: 0 0 20px 0 var(--blue);
+}
+/* [Todo Item Menu] [end] */

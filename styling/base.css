@@ -1,0 +1,44 @@
+@import "./ui/todo.css";
+@import "./ui/menu.css";
+@import "./ui/popup.css";
+@import "./ui/_add_task_popup.css";
+@import "./themes.css";
+
+body {
+  background: var(--bg);
+}
+
+h1, p {
+  animation: on-page-load 3s ease-in-out forwards;
+}
+
+.title-header {
+  color: var(--fg);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.base-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.no-tasks-label {
+  color: var(--fg);
+  text-align: center;
+  flex: 1;
+  margin-top: 50px;
+}
+
+@keyframes on-page-load {
+  from {
+    text-shadow: none;
+  }
+  to {
+    text-shadow: 0 0 1.5em var(--fg);
+  }
+}
