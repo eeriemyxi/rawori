@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/core": "^7.26.10",
+    "@babel/preset-react": "^7.26.3",
+    "live-server": "^1.2.2"
+  },
+  "babel": {
+    "presets": ["@babel/preset-react"]
+  }
+}

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if command -v live-server >/dev/null 2>&1; then
+    live-server public/&
+else
+    echo "[!] live-server is missing. Install live-server from https://github.com/tapio/live-server OR by doing the following";
+    echo -e "==> $ bun install -g live-server";
+    echo -e "==> $ npm install -g live-server";
+    exit 1;
+fi
+
+live_server_pid=$!
+
+cleanup() {
+    echo "Cleaning up..."
+    kill "$live_server_pid" 2>/dev/null
+}
+
+trap cleanup EXIT
+
+BABEL_ARGS=--watch make build
